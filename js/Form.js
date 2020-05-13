@@ -39,6 +39,7 @@ class Form {
       player.updateCount(0);
       game.update(0);
       
+      Player.updateEnd(0);
     }})
 
   }

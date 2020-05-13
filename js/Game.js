@@ -99,6 +99,11 @@ class Game {
 
     if(player.distance > 3500){
       gameState = 2;
+      player.rank += 1;
+      Player.updateEnd(player.rank);
+      textSize(30);
+      text("GameOver!      Rank :" +player.rank,displayWidth*3 -250,-displayHeight/2 );
+    
     }
    
     drawSprites();

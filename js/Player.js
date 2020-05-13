@@ -32,4 +32,17 @@ class Player {
       allPlayers = data.val();
     })
   }
+  
+  static updateEnd(rank){
+   database.ref("/").update({
+     Rank : rank
+   })
+  }
+
+  getRank(){
+    var Rankref = database.ref("Rank");
+    Rankref.on("value",(data)=>{
+     this.rank = data.val();
+    })
+  }
 }
